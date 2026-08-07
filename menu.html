@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Menu | Pho Vietnam 3969</title>
-  <meta name="description" content="Explore the full menu at Pho Vietnam 3969 — pho, noodle soups, appetizers, rice dishes, and Vietnamese and Chinese specialties." />
+  <meta name="description" content="Full menu at Pho Vietnam 3969 — hot pot, appetizers, banh mi, pho, vermicelli, com tam, vegetarian dishes, fried rice &amp; noodle, plus beverages and desserts. Search by name or item number." />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -30,178 +30,17 @@
     <p>Vietnamese &amp; Chinese favorites, made fresh daily</p>
   </section>
 
+  <div class="menu-controls">
+    <div class="menu-controls-inner">
+      <input type="text" id="menuSearch" class="menu-search" placeholder="Search dishes — try “pho”, “vermicelli”, “tofu”, or an item number…" />
+      <nav class="menu-pills" id="menuPills"></nav>
+    </div>
+  </div>
+
   <section class="menu">
     <div class="container">
-
-      <div class="menu-category">
-        <h2>Pho &amp; Noodle Soups</h2>
-        <div class="menu-items">
-          <div class="menu-item">
-            <div>
-              <p class="menu-item-name">Pho Bo (Beef Noodle Soup)</p>
-              <p class="menu-item-desc">Slow-simmered beef bone broth, rice noodles, herbs, bean sprouts.</p>
-            </div>
-            <span class="menu-item-price">$12.95</span>
-          </div>
-          <div class="menu-item">
-            <div>
-              <p class="menu-item-name">Pho Ga (Chicken Noodle Soup)</p>
-              <p class="menu-item-desc">Light chicken broth, rice noodles, shredded chicken, herbs.</p>
-            </div>
-            <span class="menu-item-price">$11.95</span>
-          </div>
-          <div class="menu-item">
-            <div>
-              <p class="menu-item-name">Hu Tieu (Clear Noodle Soup)</p>
-              <p class="menu-item-desc">Pork and shrimp broth with clear rice noodles and fresh herbs.</p>
-            </div>
-            <span class="menu-item-price">$12.50</span>
-          </div>
-          <div class="menu-item">
-            <div>
-              <p class="menu-item-name">Wonton Noodle Soup</p>
-              <p class="menu-item-desc">Pork and shrimp wontons in a light Chinese-style broth with egg noodles.</p>
-            </div>
-            <span class="menu-item-price">$12.25</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="menu-category">
-        <h2>Appetizers</h2>
-        <div class="menu-items">
-          <div class="menu-item">
-            <div>
-              <p class="menu-item-name">Fresh Spring Rolls (Goi Cuon)</p>
-              <p class="menu-item-desc">Rice paper, vermicelli, herbs, shrimp or tofu, peanut sauce.</p>
-            </div>
-            <span class="menu-item-price">$7.50</span>
-          </div>
-          <div class="menu-item">
-            <div>
-              <p class="menu-item-name">Fried Egg Rolls (Cha Gio)</p>
-              <p class="menu-item-desc">Crispy pork and vegetable rolls served with nuoc cham.</p>
-            </div>
-            <span class="menu-item-price">$7.95</span>
-          </div>
-          <div class="menu-item">
-            <div>
-              <p class="menu-item-name">Potstickers</p>
-              <p class="menu-item-desc">Pan-seared pork dumplings served with soy-vinegar dipping sauce.</p>
-            </div>
-            <span class="menu-item-price">$8.50</span>
-          </div>
-          <div class="menu-item">
-            <div>
-              <p class="menu-item-name">Edamame</p>
-              <p class="menu-item-desc">Steamed and lightly salted.</p>
-            </div>
-            <span class="menu-item-price">$5.50</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="menu-category">
-        <h2>Rice Dishes</h2>
-        <div class="menu-items">
-          <div class="menu-item">
-            <div>
-              <p class="menu-item-name">Com Tam (Broken Rice Plate)</p>
-              <p class="menu-item-desc">Grilled pork chop, egg cake, pickled vegetables over broken rice.</p>
-            </div>
-            <span class="menu-item-price">$13.95</span>
-          </div>
-          <div class="menu-item">
-            <div>
-              <p class="menu-item-name">House Fried Rice</p>
-              <p class="menu-item-desc">Wok-tossed rice, egg, scallions, choice of chicken, pork, or shrimp.</p>
-            </div>
-            <span class="menu-item-price">$11.50</span>
-          </div>
-          <div class="menu-item">
-            <div>
-              <p class="menu-item-name">Yang Chow Fried Rice</p>
-              <p class="menu-item-desc">Classic Chinese fried rice with shrimp, char siu pork, and egg.</p>
-            </div>
-            <span class="menu-item-price">$12.50</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="menu-category">
-        <h2>Vietnamese Specialties</h2>
-        <div class="menu-items">
-          <div class="menu-item">
-            <div>
-              <p class="menu-item-name">Banh Mi</p>
-              <p class="menu-item-desc">Baguette with savory meats, pate, pickled daikon and carrot, cilantro.</p>
-            </div>
-            <span class="menu-item-price">$8.95</span>
-          </div>
-          <div class="menu-item">
-            <div>
-              <p class="menu-item-name">Bun Thit Nuong</p>
-              <p class="menu-item-desc">Grilled pork over vermicelli noodles with fresh herbs and nuoc cham.</p>
-            </div>
-            <span class="menu-item-price">$12.95</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="menu-category">
-        <h2>Chinese Specialties</h2>
-        <div class="menu-items">
-          <div class="menu-item">
-            <div>
-              <p class="menu-item-name">Kung Pao Chicken</p>
-              <p class="menu-item-desc">Wok-fried chicken, peanuts, chilies, and vegetables in a savory sauce.</p>
-            </div>
-            <span class="menu-item-price">$13.50</span>
-          </div>
-          <div class="menu-item">
-            <div>
-              <p class="menu-item-name">Beef &amp; Broccoli</p>
-              <p class="menu-item-desc">Tender beef and broccoli in a savory brown sauce.</p>
-            </div>
-            <span class="menu-item-price">$13.95</span>
-          </div>
-          <div class="menu-item">
-            <div>
-              <p class="menu-item-name">Sweet &amp; Sour Pork</p>
-              <p class="menu-item-desc">Crispy pork, bell peppers, and pineapple in a tangy sauce.</p>
-            </div>
-            <span class="menu-item-price">$12.95</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="menu-category">
-        <h2>Drinks &amp; Desserts</h2>
-        <div class="menu-items">
-          <div class="menu-item">
-            <div>
-              <p class="menu-item-name">Vietnamese Iced Coffee (Ca Phe Sua Da)</p>
-              <p class="menu-item-desc">Bold drip coffee with sweetened condensed milk, served over ice.</p>
-            </div>
-            <span class="menu-item-price">$4.95</span>
-          </div>
-          <div class="menu-item">
-            <div>
-              <p class="menu-item-name">Thai Tea</p>
-              <p class="menu-item-desc">Sweet, creamy, spiced black tea over ice.</p>
-            </div>
-            <span class="menu-item-price">$4.50</span>
-          </div>
-          <div class="menu-item">
-            <div>
-              <p class="menu-item-name">Che Ba Mau (Three Color Dessert)</p>
-              <p class="menu-item-desc">Layered beans, jelly, and coconut milk over shaved ice.</p>
-            </div>
-            <span class="menu-item-price">$5.95</span>
-          </div>
-        </div>
-      </div>
-
+      <main id="menuMain"></main>
+      <p class="menu-no-results" id="menuNoResults">No dishes match your search — try another word or item number.</p>
     </div>
   </section>
 
@@ -217,5 +56,360 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    const MENU = [
+      {
+        id: "hotpot", title: "New Seafood Hot Pot", viet: "Lẩu Hải Sản", num: "01",
+        note: "All hot pots are served with a live burner at your table — please notify us of any food or nuts allergies.",
+        items: [
+          { code: "—", viet: "Special Hot Pot", eng: "Tôm, cua, chem chép, ốc, cá viên, bò viên, tái — Shrimp, imitation crab meat, mussel, surf clam, squid, fish ball, beef ball, rare beef", price: "128.00" },
+          { code: "—", viet: "Special Hot Pot for 2", eng: "Same as Special Hot Pot, portioned for two", price: "72.00" },
+          { code: "—", viet: "Regular Hot Pot", eng: "Tôm, cua, cá viên, bò viên, tái — Shrimp, imitation crab meat, squid, fish ball, beef ball, rare beef", price: "108.00" },
+          { code: "—", viet: "Regular Hot Pot for 2", eng: "Same as Regular Hot Pot, portioned for two", price: "62.00" },
+        ]
+      },
+      {
+        id: "sides", title: "Small Side Order", viet: "Món Phụ", num: "02",
+        items: [
+          { code: "1", viet: "Dĩa Chả Lụa", eng: "Vietnamese sausage (s.dish)", price: "5.99" },
+          { code: "2", viet: "Chén Cơm", eng: "Steamed rice (s.bowl)", price: "5.99" },
+          { code: "3", viet: "Chả Giò (1)", eng: "Spring roll (1)", price: "5.50" },
+          { code: "4", viet: "Nem Nướng (1)", eng: "Grilled meat ball (1)", price: "5.99" },
+          { code: "5", viet: "Chạo Tôm (1)", eng: "Grilled shrimp on sugar cane (1)", price: "7.50" },
+          { code: "6", viet: "Tôm Rim (1)", eng: "Shrimp with sauce (side)", price: "7.50" },
+          { code: "7", viet: "Trứng Ổp La (1)", eng: "Fried egg (1)", price: "2.99" },
+          { code: "8", viet: "Sườn Nướng (1)", eng: "Grilled pork chop (1)", price: "6.99" },
+          { code: "9", viet: "Gà Nướng (1)", eng: "Grilled chicken with lemongrass (1)", price: "6.99" },
+          { code: "10", viet: "Chả Trứng (1)", eng: "Steamed egg mixed w/ ground pork (1)", price: "3.99" },
+          { code: "11", viet: "Tàu Hủ Ky (1)", eng: "Bean curd wrapped shrimp paste (1)", price: "7.50" },
+          { code: "12", viet: "Chén Bì", eng: "Shredded pork skin (s.dish)", price: "5.99" },
+          { code: "13", viet: "Chén Phở", eng: "Rice noodle (s.bowl)", price: "5.25" },
+          { code: "14", viet: "Súp Hột Gà (2 trứng)", eng: "Egg soup (2 eggs) (s.bowl)", price: "7.50" },
+          { code: "15", viet: "Dĩa Tái", eng: "Rare beef (s.dish)", price: "6.99" },
+          { code: "16", viet: "Chén Bò Viên", eng: "Beef balls (s.bowl)", price: "6.99" },
+          { code: "17", viet: "Chén Gân", eng: "Soft tendon (s.bowl)", price: "6.99" },
+          { code: "18", viet: "Chén Sách", eng: "Beef tripe (s.bowl)", price: "6.99" },
+          { code: "19", viet: "Chén Nạm", eng: "Well-done flank (s.bowl)", price: "6.99" },
+          { code: "20", viet: "Chén Vè Dòn", eng: "Tendon brisket (s.bowl)", price: "6.99" },
+          { code: "21", viet: "Chén Huyết", eng: "Pork blood pudding (s.bowl)", price: "5.99" },
+          { code: "22", viet: "Xíu Mại", eng: "Vietnamese meatball with pork, jicama onion, tomato sauce", price: "6.50" },
+        ]
+      },
+      {
+        id: "appetizers", title: "Appetizers", viet: "Khai Vị", num: "03",
+        items: [
+          { code: "98", viet: "Càng Cua Chiên", eng: "Deep fried crab ball (each)", price: "7.99" },
+          { code: "99", viet: "Cánh Gà Chiên", eng: "Deep fried chicken wings, per lb (12 min)", price: "13.99" },
+          { code: "99a", viet: "Cánh Gà Chiên Với Sauce", eng: "Deep fried chicken wings with sauce, per lb (12 min)", price: "14.50" },
+          { code: "100", viet: "Hoành Thánh Chiên", eng: "Deep fried wonton (shrimp & pork)", sizes: { S: "8.25", L: "14.50" } },
+          { code: "101", viet: "Chả Giò", eng: "Deep fried spring roll w/ shrimp, pork & vegetable (2 or 4 rolls)", sizes: { S: "8.25", L: "14.50" } },
+          { code: "102", viet: "Gỏi Xoài", eng: "Mango salad, green & red pepper & fried shrimp paste", price: "13.50" },
+          { code: "103", viet: "Bì Cuốn", eng: "Shredded pork skin & salad roll (2 or 4 rolls)", sizes: { S: "8.25", L: "14.50" } },
+          { code: "104", viet: "Gỏi Cuốn Tôm Thịt", eng: "Fresh shrimp, pork & salad roll with vermicelli & peanut sauce (2 or 4 rolls)", sizes: { S: "8.25", L: "14.50" } },
+          { code: "105", viet: "Gỏi Ngó Sen Tôm", eng: "Lotus root salad, mint leaves with shrimp, pickle, peanut", price: "13.99" },
+          { code: "106", viet: "Síu Mại Tôm Heo (10pc.)", eng: "Pork & shrimp siu mai (15 min)", price: "13.99" },
+          { code: "107", viet: "Síu Mại Tôm (10pc.)", eng: "Shrimp siu mai (15 min)", price: "13.99" },
+          { code: "108", viet: "Síu Mại Gà (10pc.)", eng: "Chicken siu mai (15 min)", price: "13.99" },
+          { code: "109", viet: "Bánh Cuốn Nóng (không chả lụa)", eng: "Steamed rice flour with ground pork, black fungus, without sausage", price: "13.50" },
+          { code: "110", viet: "Bánh Cuốn Nóng Chả Lụa", eng: "Steamed rice flour w/ ground pork, black fungus & Vietnamese sausage", price: "14.50" },
+          { code: "111", viet: "Há Cảo Tôm (10pc.)", eng: "Shrimp dumpling (15 min)", price: "13.99" },
+          { code: "112", viet: "Bánh Xèo", eng: "Vietnamese crepes w/ vegetable & shrimp, pork, or chicken", price: "15.25" },
+          { code: "113", viet: "Mực Chiên Dòn Rau Cải", eng: "Deep fried squid & vegetable", price: "17.50" },
+          { code: "114", viet: "Tôm Chiên Dòn Rau Cải", eng: "Deep fried shrimp & vegetable", price: "17.50" },
+        ]
+      },
+      {
+        id: "banhmi", title: "Vietnamese Sandwich", viet: "Bánh Mì", num: "04",
+        items: [
+          { code: "S01", viet: "Bánh Mì Đặc Biệt", eng: "Assorted meats sandwich & side of broth or pop — cold cuts, Vietnamese ham/sausage, pork belly, pâté, pickled veggies, cilantro, hot chili", price: "11.99" },
+          { code: "S02", viet: "Bánh Mì Xá Xíu", eng: "BBQ pork sandwich & side of broth or pop — pâté, butter, pickle veggies, cucumber, cilantro, hot chili", price: "11.75" },
+          { code: "S03", viet: "Bánh Mì Bì", eng: "Shredded pork skin sandwich & side of broth or pop — Vietnamese ham, pâté, butter, pickle veggies", price: "11.75" },
+          { code: "S04", viet: "Bánh Mì Heo/Bò Hoặc Gà", eng: "Grilled pork, beef, or chicken sandwich & side of broth or pop", price: "11.75" },
+          { code: "S05", viet: "Bánh Mì Xíu Mại", eng: "Xiu mai sandwich & side of broth or pop — Vietnamese meatball w/ pork, jicama onion, tomato sauce", price: "11.75" },
+          { code: "B01", viet: "Bánh Bao", eng: "Siu bao — ground pork, egg, sausage & vegetable", price: "6.50" },
+        ]
+      },
+      {
+        id: "noodles", title: "Clear & Egg Noodle", viet: "Hủ Tiếu Mì", num: "05",
+        items: [
+          { code: "212", viet: "Hủ Tiếu Mỹ Tho (khô hoặc nước)", eng: "“My Tho” style seafood & BBQ pork clear noodle soup (or on the side)", price: "16.25" },
+          { code: "213", viet: "Mì Đặc Biệt (khô hoặc nước)", eng: "Special seafood & BBQ pork egg noodle soup (or on the side)", price: "16.25" },
+          { code: "214", viet: "Hủ Tiếu Mì (khô hoặc nước)", eng: "Seafood & BBQ pork clear noodle & egg noodle soup (or on the side)", price: "16.25" },
+          { code: "215", viet: "Bún Bò Huế", eng: "“Hue” style beef, pork hock & blood pudding w/ vermicelli in spicy soup", price: "16.75" },
+          { code: "216", viet: "Hoành Thánh Mì", eng: "Wonton (shrimp & pork) with BBQ pork, egg noodle soup", sizes: { M: "16.25", L: "17.50", XL: "18.75" } },
+          { code: "217", viet: "Súp Hoành Thánh", eng: "Wonton soup (shrimp & pork)", sizes: { S: "13.75", M: "14.99", L: "16.50", XL: "17.50" } },
+          { code: "218", viet: "Bánh Canh Tôm Cua", eng: "Udon noodle soup with shrimp & imitation crab meat", price: "16.25" },
+          { code: "219", viet: "Bánh Canh Giò Heo & Chả Lụa", eng: "Udon noodle soup with pork hock & Vietnamese sausage", price: "16.25" },
+          { code: "220", viet: "Bò Kho", eng: "Beef stew with egg noodle, rice noodle, clear noodle, or 1 bread", sizes: { M: "16.25", XL: "19.99" } },
+        ]
+      },
+      {
+        id: "pho", title: "AAA Beef Rice Noodle Soup", viet: "Phở", num: "06",
+        note: "Sizes: S · M · L · XL. A few prices were not fully legible on the scanned menu and are marked “ask staff.”",
+        items: [
+          { code: "316", viet: "Phở Không", eng: "Plain rice noodle soup", sizes: { S: "11.50", M: "12.50", L: "13.50", XL: "14.50" } },
+          { code: "317", viet: "Phở Vè Dòn", eng: "Tendon brisket rice noodle soup", sizes: { S: "14.25", M: "15.50", L: "16.75", XL: "18.50" } },
+          { code: "318", viet: "Phở Tái", eng: "Rare beef rice noodle soup", sizes: { S: "13.75", M: "14.99", L: "16.50", XL: "17.99" } },
+          { code: "319", viet: "Phở Tái Nạm", eng: "Rare beef & well-done flank rice noodle soup", price: null },
+          { code: "320", viet: "Phở Rau Cải", eng: "Vegetable rice noodle soup", price: null },
+          { code: "321", viet: "Phở Tái Bò Viên", eng: "Rare beef & beef balls rice noodle soup", price: null },
+          { code: "322", viet: "Phở Tái Gầu", eng: "Rare beef & brisket rice noodle soup", price: null },
+          { code: "323", viet: "Phở Tái Gân", eng: "Rare beef & soft tendon rice noodle soup", price: null },
+          { code: "324", viet: "Phở Tái Sách", eng: "Rare beef & beef tripe rice noodle soup", price: null },
+          { code: "325", viet: "Phở Tái Nạm Bò Viên", eng: "Rare beef, well-done flank & beef balls rice noodle soup", price: null },
+          { code: "326", viet: "Phở Tái Nạm Gân", eng: "Rare beef, well-done flank & soft tendon rice noodle soup", price: null },
+          { code: "327", viet: "Phở Tái Nạm Sách", eng: "Rare beef, well-done flank & beef tripe rice noodle soup", sizes: { S: "13.75", M: "14.99", L: "16.50", XL: "17.99" } },
+          { code: "328", viet: "Phở Nạm", eng: "Well-done flank rice noodle soup", sizes: { S: "14.25", M: "15.50", L: "16.75", XL: "18.50" } },
+          { code: "329", viet: "Phở Nạm Bò Viên", eng: "Well-done flank & beef balls rice noodle soup", price: null },
+          { code: "330", viet: "Phở Nạm Gầu", eng: "Well-done flank & brisket rice noodle soup", price: null },
+          { code: "331", viet: "Phở Nạm Gân", eng: "Well-done flank & soft tendon rice noodle soup", price: null },
+          { code: "332", viet: "Phở Nạm Sách", eng: "Well-done flank & beef tripe rice noodle soup", price: null },
+          { code: "333", viet: "Phở Nạm Gân Sách", eng: "Well-done flank, soft tendon & beef tripe rice noodle soup", price: null },
+          { code: "334", viet: "Phở Bò Viên Sách", eng: "Beef balls & tripe rice noodle soup", price: null },
+          { code: "335", viet: "Phở Bò Viên", eng: "Beef balls rice noodle soup", price: null },
+          { code: "336", viet: "Phở Đặc Biệt", eng: "Special assorted beef rice noodle soup (tái, nạm, gân, sách, bò viên)", sizes: { S: "14.25", M: "15.50", L: "16.75", XL: "18.50" } },
+          { code: "337", viet: "Phở Gà Nướng", eng: "Grilled chicken with lemongrass & rice noodle soup", price: null },
+          { code: "338", viet: "Phở Gà", eng: "Chicken rice noodle soup", price: null },
+          { code: "339", viet: "Phở Tái Gà", eng: "Rare beef & chicken rice noodle soup", price: null },
+          { code: "340", viet: "Phở Nạm Gà", eng: "Well-done flank & chicken rice noodle soup", price: null },
+          { code: "341", viet: "Phở Bò Gà", eng: "Assorted beef & chicken rice noodle soup (tái, nạm, gân, sách, bò viên gà)", price: null },
+          { code: "342", viet: "Phở Tôm Nướng", eng: "Grilled shrimp rice noodle soup", price: null },
+          { code: "343", viet: "Phở Đồ Biển Rau Cải", eng: "Seafood with vegetable rice noodle soup", sizes: { S: "14.50", M: "15.75", L: "16.99", XL: "18.75" } },
+          { code: "344", viet: "Phở Thái", eng: "Thai style rare beef & shrimp rice noodle soup", price: null },
+          { code: "345", viet: "Phở Tom Yum", eng: "Well-done flank w/ Tom Yum sauce rice noodle soup", price: null },
+          { code: "346", viet: "Phở Heo Nướng", eng: "Grilled pork with lemongrass rice noodle soup", price: null },
+          { code: "347", viet: "Phở Xá Xíu", eng: "BBQ pork rice noodle soup", price: null },
+          { code: "348", viet: "Phở Bò Nướng", eng: "Grilled beef with lemongrass rice noodle soup", price: null },
+        ]
+      },
+      {
+        id: "bun", title: "Vermicelli", viet: "Bún", num: "07",
+        items: [
+          { code: "441", viet: "Bún Đặc Biệt", eng: "Special assorted meat vermicelli (beef, chicken, pork & shrimp)", price: "17.99" },
+          { code: "442", viet: "Bún Tôm Nướng", eng: "Vermicelli with grilled shrimp", price: "17.99" },
+          { code: "443", viet: "Bún Tôm Nướng, Chả Giò", eng: "Vermicelli with grilled shrimp & spring roll (pork & shrimp)", price: "17.99" },
+          { code: "447", viet: "Bún Thịt Nướng, Chả Giò, Bì", eng: "Vermicelli with grilled pork, spring roll & shredded pork skin", price: "16.75" },
+          { code: "448", viet: "Bún Thịt Nướng, Chả Giò", eng: "Vermicelli with grilled pork & spring roll (pork & shrimp)", price: "16.75" },
+          { code: "449", viet: "Bún Thịt Nướng, Bì", eng: "Vermicelli with grilled pork & shredded pork skin", price: "16.75" },
+          { code: "450", viet: "Bún Chả Giò, Bì", eng: "Vermicelli with spring roll & shredded pork skin", price: "16.75" },
+          { code: "451", viet: "Bún Chả Giò", eng: "Vermicelli with spring roll (pork & shrimp)", price: "16.75" },
+          { code: "452", viet: "Bún Bò Xào Xả Ớt", eng: "Grilled beef with lemongrass & hot chili on vermicelli", price: "16.99" },
+          { code: "452a", viet: "Bún Chả Giò Gà Nướng", eng: "Vermicelli with spring roll & grilled chicken with lemongrass", price: "16.99" },
+          { code: "453", viet: "Bún Gà Nướng", eng: "Vermicelli with grilled chicken with lemongrass", price: "16.99" },
+          { code: "454", viet: "Bún Thịt Nướng, Nem Nướng", eng: "Vermicelli with grilled pork & grilled meat balls", price: "16.75" },
+          { code: "455", viet: "Bún Chả Giò, Nem Nướng", eng: "Vermicelli with spring roll & grilled meat balls", price: "16.75" },
+          { code: "456", viet: "Bún Nem Nướng", eng: "Vermicelli with Vietnamese grilled meat balls", price: "16.75" },
+          { code: "457", viet: "Nem Nướng", eng: "Vietnamese grilled meat balls, served with vermicelli, mint leaves, salad & rice paper — make your own wrap", price: "19.50" },
+          { code: "477", viet: "Bún Chạo Tôm, Chả Giò", eng: "Vermicelli with grilled shrimp paste on sugar cane & spring roll", price: "17.99" },
+          { code: "—", viet: "Bún Chạo Tôm, Nem Nướng, Bì", eng: "Vermicelli with grilled shrimp paste on sugar cane, shredded pork skin & meat ball", price: "19.50" },
+        ]
+      },
+      {
+        id: "comtam", title: "Steamed Rice", viet: "Cơm Tấm", num: "08",
+        items: [
+          { code: "458", viet: "Cơm Tấm Sườn Nướng, Chả, Bì", eng: "Grilled pork chop, shredded pork skin & steamed egg with ground pork, steamed rice", price: "16.99" },
+          { code: "459", viet: "Cơm Tấm Sườn Nướng, Bì, Trứng Ổp La", eng: "Grilled pork chop, shredded pork skin & fried egg, steamed rice", price: "16.99" },
+          { code: "460", viet: "Cơm Tấm Sườn Nướng, Chả, Ổp La", eng: "Grilled pork chop, fried egg & steamed egg with ground pork, steamed rice", price: "16.99" },
+          { code: "461", viet: "Cơm Tấm Sườn Nướng", eng: "Grilled pork chop with steamed rice", price: "16.99" },
+          { code: "462", viet: "Cơm Tấm Sườn Nướng Bì", eng: "Grilled pork chop & shredded pork skin, steamed rice", price: "16.99" },
+          { code: "463", viet: "Cơm Tấm Sườn Nướng Chả", eng: "Grilled pork chop, steamed egg with ground pork, steamed rice", price: "16.99" },
+          { code: "464", viet: "Cơm Tấm Sườn Nướng, Trứng Ổp La", eng: "Grilled pork chop with fried egg, steamed rice", price: "16.99" },
+          { code: "465", viet: "Cơm Tấm Gà Nướng, Bì, Chả", eng: "Grilled chicken with lemongrass, shredded pork skin, steamed egg with ground pork, steamed rice", price: "16.99" },
+          { code: "466", viet: "Cơm Tấm Gà Nướng, Bì, Trứng Ổp La", eng: "Grilled chicken with lemongrass, shredded pork skin & fried egg, steamed rice", price: "16.99" },
+          { code: "467", viet: "Cơm Tấm Gà Nướng, Chả, Ổp La", eng: "Grilled chicken with lemongrass, fried egg, steamed egg with ground pork, steamed rice", price: "16.99" },
+          { code: "468", viet: "Cơm Tấm Gà Nướng, Sườn Nướng, Ổp La", eng: "Grilled chicken with lemongrass, pork chop & fried egg, steamed rice", price: "17.25" },
+          { code: "469", viet: "Cơm Tấm Đặc Biệt", eng: "Grilled chicken with lemongrass, pork chop, shredded pork skin, steamed egg with ground pork, fried egg, steamed rice", price: "18.50" },
+          { code: "470", viet: "Cơm Tấm Gà Nướng, Bì", eng: "Grilled chicken with lemongrass, shredded pork skin, steamed rice", price: "16.99" },
+          { code: "471", viet: "Cơm Tấm Gà Nướng Chả", eng: "Grilled chicken with lemongrass, steamed egg with ground pork, steamed rice", price: "16.99" },
+          { code: "472", viet: "Cơm Tấm Gà Nướng, Trứng Ổp La", eng: "Grilled chicken with lemongrass, fried egg, steamed rice", price: "16.99" },
+          { code: "473", viet: "Cơm Tấm Gà Nướng", eng: "Grilled chicken with lemongrass, steamed rice", price: "17.25" },
+          { code: "474a", viet: "Cơm Tôm Rim Gà Nướng", eng: "Marinated shrimp with sauce, grilled chicken with lemongrass, steamed rice", price: "18.50" },
+          { code: "474b", viet: "Cơm Tôm Rim Sườn Nướng", eng: "Marinated shrimp, grilled pork chop, steamed rice", price: "18.50" },
+          { code: "475", viet: "Cơm Tàu Hủ Ky Tôm, Gà Nướng", eng: "Bean curd wrapped shrimp paste, grilled chicken, steamed rice", price: "18.50" },
+          { code: "476", viet: "Cơm Tàu Hủ Ky Tôm, Sườn Nướng", eng: "Bean curd wrapped shrimp paste, grilled pork chop, steamed rice", price: "18.50" },
+          { code: "476a", viet: "Cơm Sườn Bò Non Nướng", eng: "Grilled beef short rib with steamed rice", price: "18.75" },
+        ]
+      },
+      {
+        id: "chay", title: "Vegetarian", viet: "Thức Ăn Chay", num: "09",
+        items: [
+          { code: "501", viet: "Chả Giò Chay", eng: "Vegetarian deep fried spring rolls (12 min)", sizes: { S: "8.25", L: "14.50" } },
+          { code: "502", viet: "Bún Chả Giò Chay", eng: "Vermicelli with vegetable spring rolls (12 min)", price: "16.75" },
+          { code: "503", viet: "Bún Đậu Hũ Chiên", eng: "Vermicelli with deep fried tofu", price: "16.75" },
+          { code: "505", viet: "Gỏi Cuốn Chay", eng: "Vegetarian fresh rolls with tofu, vermicelli & peanut sauce", sizes: { S: "8.25", L: "14.50" } },
+          { code: "506", viet: "Phở Rau Cải Đậu Hũ", eng: "Mixed vegetable & tofu rice noodle soup", sizes: { S: "13.75", M: "14.99", L: "16.50", XL: "17.99" } },
+          { code: "507", viet: "Đậu Hũ Chiên", eng: "Deep fried tofu", price: "14.50" },
+          { code: "508", viet: "Cơm Rau Cải Xào Đậu Hũ", eng: "Stir fried mixed vegetable with tofu on steamed rice", price: "17.99" },
+          { code: "509", viet: "Mì Xào Giòn Rau Cải Đậu Hũ", eng: "Stir fried mixed vegetable & tofu with crispy egg noodle", price: "17.99" },
+          { code: "509a", viet: "Mì Xào Mềm Rau Cải Đậu Hũ", eng: "Stir fried mixed vegetable & tofu with soft egg noodle", price: "17.99" },
+          { code: "510", viet: "Cơm Chiên Chay", eng: "Vegetarian, mixed vegetable, tofu fried rice", price: "17.99" },
+          { code: "511", viet: "Pad Thái Chay", eng: "Thai style stir fried mixed vegetable, tofu with rice noodle", price: "17.99" },
+          { code: "512", viet: "Bún Xào Singapore Chay", eng: "Stir fried vermicelli with curry, tofu & mixed vegetable (Singapore style)", price: "17.99" },
+          { code: "513", viet: "Hủ Tiếu Xào Rau Cải Đậu Hũ", eng: "Stir fried rice noodle with tofu & mixed vegetable", price: "17.99" },
+        ]
+      },
+      {
+        id: "friedrice", title: "Fried Rice / Noodle", viet: "Cơm Chiên · Mì / Hủ Tiếu Xào", num: "10",
+        items: [
+          { code: "601", viet: "Cơm Chiên Gà Thái Lan", eng: "Thai style chicken with egg, peas, carrot, corn fried rice", price: "17.99" },
+          { code: "602", viet: "Cơm Chiên Tôm Thái Lan", eng: "Thai style shrimp with egg, peas, carrot, corn fried rice", price: "17.99" },
+          { code: "603", viet: "Cơm Chiên Thượng Hải", eng: "Shanghai fried rice with egg, BBQ pork, shrimp, corn, peas, carrot, lettuce", price: "17.99" },
+          { code: "604", viet: "Cơm Chiên Dương Châu", eng: "Yang Chow fried rice with egg, BBQ pork, shrimp, sausage, peas, carrot, corn", price: "17.99" },
+          { code: "605", viet: "Cơm Chiên Gà", eng: "Chicken with egg, peas, carrot, corn fried rice", price: "17.99" },
+          { code: "606", viet: "Cơm Chiên Tôm", eng: "Shrimp with egg, peas, carrot, corn fried rice", price: "17.99" },
+          { code: "606a", viet: "Cơm Chiên Đồ Biển", eng: "Seafood with egg, peas, carrot, corn fried rice", price: "17.99" },
+          { code: "607", viet: "Cơm Chiên Gà, Tôm", eng: "Chicken & shrimp with egg, peas, corn & carrot fried rice", price: "17.99" },
+          { code: "608", viet: "Cơm Chiên Gà Càri", eng: "Curry chicken with egg, peas, carrot, corn fried rice", price: "17.99" },
+          { code: "609", viet: "Cơm Chiên Bò Càri", eng: "Curry beef with egg, peas, carrot, corn fried rice", price: "18.50" },
+          { code: "610", viet: "Cơm Chiên Xá Xíu", eng: "BBQ pork with egg, peas, carrot, corn fried rice", price: "17.99" },
+          { code: "611", viet: "Cơm Chiên Gà Hạt Điều", eng: "Chicken, egg with cashew, peas, carrot, corn fried rice", price: "17.99" },
+          { code: "612", viet: "Cơm Chiên Đặc Biệt", eng: "Special fried rice, shrimp, chicken, beef, BBQ pork, egg, peas, carrot, corn", price: "18.50" },
+          { code: "613", viet: "Mì Xào Đồ Biển Rau Cải", eng: "Assorted seafood & vegetables w/ crispy or soft egg noodle", price: "17.99" },
+          { code: "614", viet: "Mì Xào Giòn Đặc Biệt", eng: "Special stir fried beef, chicken, seafood & vegetables, crispy or soft egg noodle", price: "18.50" },
+          { code: "615", viet: "Mì Xào Giòn Tôm Rau Cải", eng: "Shrimp & vegetables with crispy or soft egg noodle", price: "17.99" },
+          { code: "616", viet: "Mì Xào Giòn Bò Rau Cải", eng: "Beef & vegetables with crispy or soft egg noodle", price: "18.50" },
+          { code: "617", viet: "Pad Thái Tôm Gà Rau Cải", eng: "Thai style stir fried rice noodle with shrimp, chicken, tofu, egg & vegetables", price: "17.99" },
+          { code: "618", viet: "Pad Thái Đồ Biển Rau Cải", eng: "Thai style stir fried rice noodle with assorted seafood, tofu, egg & vegetable", price: "17.99" },
+          { code: "619", viet: "Hủ Tiếu Xào Đồ Biển Rau Cải", eng: "Stir fried rice noodle with assorted seafood & mixed vegetable", price: "17.99" },
+          { code: "620", viet: "Hủ Tiếu Xào Đặc Biệt", eng: "Special stir fried rice noodle with beef, chicken, seafood & mixed vegetable", price: "18.50" },
+          { code: "621", viet: "Hủ Tiếu Xào Tôm Rau Cải", eng: "Stir fried rice noodle with shrimp & mixed vegetable", price: "17.99" },
+          { code: "622", viet: "Hủ Tiếu Xào Bò Rau Cải", eng: "Stir fried rice noodle with beef & mixed vegetable", price: "18.50" },
+          { code: "623", viet: "Hủ Tiếu Xào Gà Rau Cải", eng: "Stir fried rice noodle with chicken & mixed vegetable", price: "17.99" },
+          { code: "624", viet: "Hủ Tiếu Xào Bò Hành Gừng", eng: "Stir fried rice noodle with beef, ginger & green onion", price: "18.50" },
+          { code: "625", viet: "Cơm Gà Xào Rau Cải", eng: "Stir fried chicken & mixed vegetable on rice", price: "17.99" },
+          { code: "626", viet: "Cơm Bò Xào Rau Cải", eng: "Stir fried beef & mixed vegetable on rice", price: "18.50" },
+          { code: "627", viet: "Cơm Xào Đặc Biệt", eng: "Special stir fried beef, chicken, seafood & vegetable on steamed rice", price: "18.50" },
+          { code: "628", viet: "Bún Xào Singapore Đặc Biệt", eng: "Special Singapore style vermicelli with curry, beef, chicken, seafood, egg & mixed vegetable", price: "18.50" },
+          { code: "628a", viet: "Bún Xào Đồ Biển Singapore", eng: "Singapore style vermicelli with curry, seafood, egg & mixed vegetable", price: "17.99" },
+          { code: "629", viet: "Mì Xào Thượng Hải", eng: "Stir fried Shanghai udon noodle with shrimp, BBQ pork, mixed vegetable", price: "17.99" },
+          { code: "—", viet: "Cơm Xào Gà Rau Cải Thái Sauce", eng: "Stir fried chicken, vegetable & Thai sauce on rice", price: "17.99" },
+        ]
+      },
+      {
+        id: "drinks", title: "Beverages & Desserts", viet: "Giải Khát", num: "11",
+        items: [
+          { code: "777", viet: "Bubble Tea", eng: "Taro, red bean, peach, honeydew, blueberry, mango, pineapple, lychee, strawberry, passion fruit, banana, coconut, green apple, milk tea, coffee, matcha green tea", sizes: { M: "6.99", L: "7.99" } },
+          { code: "778", viet: "Cà Phê Đen Nóng/Lạnh", eng: "Filtered coffee, hot or cold black (8 min)", price: "6.99" },
+          { code: "779", viet: "Cà Phê Sữa Nóng/Lạnh", eng: "Filtered coffee with condensed milk, hot or cold (8 min)", price: "6.99" },
+          { code: "780", viet: "Cà Phê Sữa Nóng/Lạnh", eng: "Machine coffee with condensed milk, hot or cold", price: "6.99" },
+          { code: "781", viet: "Nước Ngọt Các Loại", eng: "Soft drinks — Coke, Sprite, Crush, Pepsi, Nestea, club soda, orange...", price: "2.50" },
+          { code: "783", viet: "Nước Đá Chanh Tươi", eng: "Fresh squeezed lime juice with sugar & ice", price: "6.99" },
+          { code: "784", viet: "Nước Đá Chanh Muối", eng: "Salted lime juice with sugar & ice", price: "6.99" },
+          { code: "785", viet: "Soda Chanh Tươi", eng: "Fresh squeezed lime juice with soda, sugar & ice", price: "6.99" },
+          { code: "786", viet: "Soda Chanh Muối", eng: "Salted lime juice with soda, sugar & ice", price: "6.99" },
+          { code: "787", viet: "Soda Sữa Hột Gà", eng: "Soda whipped with condensed milk & one egg yolk", price: "8.99" },
+          { code: "790", viet: "Đá Nhãn Nhục", eng: "Dried longan with sugar & ice", price: "6.99" },
+          { code: "791", viet: "Thạch Chè", eng: "Sweet jelly, white kidney beans, coconut milk & shaved ice", price: "6.99" },
+          { code: "792", viet: "Thạch Nhãn", eng: "Sweet jelly & dried longan with ice", price: "6.99" },
+          { code: "793", viet: "Sương Sa Hột Lựu", eng: "Jelly, white beans & tapioca w/ coconut milk & shaved ice", price: "6.99" },
+          { code: "794", viet: "Chè 3 Màu", eng: "Two kinds of beans, jelly with coconut milk & shaved ice", price: "6.99" },
+          { code: "795", viet: "Cam Vắt", eng: "Fresh squeezed orange juice with ice", price: "6.99" },
+          { code: "796", viet: "Rau Má", eng: "Penny wort leaves juice", price: "6.99" },
+          { code: "797", viet: "Dừa Xiêm", eng: "Fresh coconut juice", price: "6.99" },
+          { code: "798", viet: "Sinh Tố Dừa Tươi", eng: "Coconut milk shake", price: "6.99" },
+          { code: "799", viet: "Sinh Tố Mãng Cầu", eng: "Soursop smoothie", price: "6.99" },
+          { code: "800", viet: "Sinh Tố Mít", eng: "Jackfruit smoothie", price: "6.99" },
+          { code: "801", viet: "Sinh Tố Sầu Riêng", eng: "Durian milk shake", price: "6.99" },
+          { code: "802", viet: "Sinh Tố Dâu", eng: "Strawberry milk shake", price: "6.99" },
+          { code: "803", viet: "Sinh Tố Rau Má", eng: "Penny wort leaves smoothie", price: "6.99" },
+          { code: "804", viet: "Nước Mía", eng: "Sugarcane juice", price: "6.99" },
+          { code: "805", viet: "Sinh Tố Bơ", eng: "Avocado milk shake", price: "6.99" },
+          { code: "806", viet: "Sinh Tố Xoài", eng: "Mango smoothie", price: "6.99" },
+          { code: "807", viet: "Sinh Tố Đu Đủ", eng: "Papaya milk shake", price: "6.99" },
+          { code: "808", viet: "Sinh Tố Đậu Xanh Sầu Riêng", eng: "Durian & mung bean milk shake", price: null },
+          { code: "809", viet: "Nước Đá Chanh Dây", eng: "Passion fruit juice with sugar & ice", price: "6.99" },
+          { code: "810", viet: "Chuối Chiên", eng: "Deep fried banana with coconut milk & peanut", price: "6.99" },
+          { code: "811", viet: "Chè Halo Halo", eng: "Filipino dessert — bean, purple yam, jelly, shredded coconut, milk, ube ice cream, jackfruit with shaved ice", price: "7.99" },
+          { code: "812", viet: "Chè Thái", eng: "Thai cocktail with palm seed, jackfruit, longan, jelly, milk, durian with shaved ice", price: "7.99" },
+          { code: "813", viet: "Chè Dừa Dầm", eng: "Shredded coconut, coconut jelly, coconut cream with shaved ice", price: "6.99" },
+          { code: "814", viet: "Chè Khoai Môn", eng: "Taro with sweet rice pudding & coconut milk", price: "6.99" },
+          { code: "815", viet: "Chè Đậu Trắng", eng: "Black eyed peas with sweet rice pudding & coconut milk", price: "6.99" },
+          { code: "816", viet: "Bánh Flan", eng: "Flan cake", price: "6.50" },
+          { code: "817", viet: "Bánh Bò Nướng", eng: "Honeycomb cake — sugar, egg, tapioca flour & coconut milk", price: "6.50" },
+        ]
+      }
+    ];
+
+    const main = document.getElementById("menuMain");
+    const pillNav = document.getElementById("menuPills");
+    const noResults = document.getElementById("menuNoResults");
+    const searchInput = document.getElementById("menuSearch");
+
+    function priceHTML(item) {
+      if (item.sizes) {
+        return `<div class="menu-sizes">${Object.entries(item.sizes).map(([k, v]) => `<span>${k} $${v}</span>`).join("")}</div>`;
+      }
+      if (item.price === null || item.price === undefined) {
+        return `<span class="menu-price na">ask staff</span>`;
+      }
+      return `<span class="menu-price">$${item.price}</span>`;
+    }
+
+    MENU.forEach(section => {
+      const pill = document.createElement("button");
+      pill.textContent = section.title;
+      pill.dataset.target = section.id;
+      pill.addEventListener("click", () => {
+        document.getElementById(section.id).scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+      pillNav.appendChild(pill);
+
+      const cat = document.createElement("div");
+      cat.className = "menu-category";
+      cat.id = section.id;
+      cat.innerHTML = `
+        <div class="menu-band">
+          <span class="menu-num">${section.num}</span>
+          <h2>${section.title}</h2>
+          <span class="menu-viet">${section.viet}</span>
+        </div>
+        ${section.note ? `<p class="menu-note">${section.note}</p>` : ""}
+        <div class="menu-grid">
+          ${section.items.map(item => `
+            <article class="menu-card" data-search="${(item.viet + " " + item.eng + " " + item.code).toLowerCase()}">
+              <div class="menu-card-top">
+                <div>
+                  <span class="menu-code">${item.code}</span>
+                  <div class="menu-viet-name">${item.viet}</div>
+                </div>
+                ${item.sizes ? "" : priceHTML(item)}
+              </div>
+              <div class="menu-eng-name">${item.eng}</div>
+              ${item.sizes ? priceHTML(item) : ""}
+            </article>
+          `).join("")}
+        </div>
+      `;
+      main.appendChild(cat);
+    });
+
+    searchInput.addEventListener("input", () => {
+      const q = searchInput.value.trim().toLowerCase();
+      let anyVisible = false;
+      document.querySelectorAll(".menu-category").forEach(cat => {
+        let hasMatch = false;
+        cat.querySelectorAll(".menu-card").forEach(card => {
+          const match = card.dataset.search.includes(q);
+          card.style.display = match ? "" : "none";
+          if (match) hasMatch = true;
+        });
+        cat.style.display = (q === "" || hasMatch) ? "" : "none";
+        if (hasMatch || q === "") anyVisible = true;
+      });
+      noResults.style.display = anyVisible ? "none" : "block";
+    });
+
+    const categories = Array.from(document.querySelectorAll(".menu-category"));
+    const pills = Array.from(pillNav.children);
+    const spy = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          pills.forEach(p => p.classList.toggle("active", p.dataset.target === id));
+        }
+      });
+    }, { rootMargin: "-40% 0px -55% 0px", threshold: 0 });
+    categories.forEach(c => spy.observe(c));
+  </script>
 </body>
 </html>
