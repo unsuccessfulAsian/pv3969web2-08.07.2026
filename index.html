@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pho Vietnam 3969 | Vietnamese &amp; Chinese Cuisine</title>
+  <meta name="description" content="Pho Vietnam 3969 — authentic Vietnamese and Chinese cuisine, famous for our staple Vietnamese noodle soup, pho." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-wrap">
+      <a href="index.html" class="logo">Pho <span>Vietnam 3969</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Pho Vietnam 3969</h1>
+      <p class="tagline">Authentic Vietnamese &amp; Chinese Cuisine, Bowl by Bowl</p>
+      <div class="hero-buttons">
+        <a href="menu.html" class="btn btn-accent">View Our Menu</a>
+        <a href="#contact" class="btn btn-outline">Visit Us</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="dishes">
+    <div class="container">
+      <h2 class="section-title">Signature Dishes</h2>
+      <p class="section-subtitle">Slow-simmered broths, fresh herbs, and time-honored recipes from Vietnam and China.</p>
+      <div class="dishes-grid">
+        <div class="dish-card">
+          <img src="assets/images/dish-pho.svg" alt="Bowl of pho bo" />
+          <div class="dish-card-body">
+            <h3>Pho Bo</h3>
+            <p>Our staple beef noodle soup, simmered for hours in a fragrant bone broth.</p>
+          </div>
+        </div>
+        <div class="dish-card">
+          <img src="assets/images/dish-banhmi.svg" alt="Banh mi sandwich" />
+          <div class="dish-card-body">
+            <h3>Banh Mi</h3>
+            <p>Crusty baguette packed with savory meats, pickled veggies, and fresh herbs.</p>
+          </div>
+        </div>
+        <div class="dish-card">
+          <img src="assets/images/dish-springroll.svg" alt="Fresh spring rolls" />
+          <div class="dish-card-body">
+            <h3>Spring Rolls</h3>
+            <p>Fresh rice paper rolls with herbs, vermicelli, and your choice of protein.</p>
+          </div>
+        </div>
+        <div class="dish-card">
+          <img src="assets/images/dish-friedrice.svg" alt="Chinese fried rice" />
+          <div class="dish-card-body">
+            <h3>House Fried Rice</h3>
+            <p>Wok-tossed rice with egg, scallions, and a savory Chinese-style seasoning.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about-section">
+    <div class="container">
+      <h2 class="section-title">Our Story</h2>
+      <div class="divider"></div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Pho Vietnam 3969 was born from a love of the bowls that bring families together. We blend
+            traditional Vietnamese cooking with beloved Chinese classics, honoring recipes passed down
+            through generations while bringing fresh, local ingredients to every table.</p>
+          <p>Our pho is our pride: bones simmered low and slow, charred aromatics, and a broth that takes
+            all day to get right. Pull up a seat and taste the difference a family recipe makes.</p>
+        </div>
+        <img src="assets/images/about-1.svg" alt="Inside our kitchen" />
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Visit &amp; Contact Us</h2>
+      <p class="section-subtitle">We'd love to see you — stop by, give us a call, or send a message.</p>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Hours</h3>
+          <p>Mon – Fri: 10:00 AM – 9:00 PM</p>
+          <p>Sat – Sun: 10:00 AM – 9:30 PM</p>
+          <h3>Address</h3>
+          <p>3969 Main Street, Your City, ST 00000</p>
+          <h3>Phone</h3>
+          <p>(555) 396-9000</p>
+          <h3>Email</h3>
+          <p>hello@phovietnam3969.com</p>
+        </div>
+        <iframe
+          class="map-frame"
+          src="https://www.google.com/maps?q=Pho+Vietnam+3969&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Map to Pho Vietnam 3969">
+        </iframe>
+      </div>
+
+      <form class="contact-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+            <span class="form-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+            <span class="form-error"></span>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone" />
+            <span class="form-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required />
+            <span class="form-error"></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <span class="form-error"></span>
+        </div>
+        <button type="submit" class="btn btn-accent">Send Message</button>
+        <p class="form-status"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="logo">Pho <span>Vietnam 3969</span></div>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <small>&copy; 2026 Pho Vietnam 3969. All rights reserved.</small>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
