@@ -1,0 +1,6 @@
+sizing schemes:
+appetizers: 
+- item numbers 100, 101, 103, 104 
+- 	small is $8.25, large is $14.50
+- item number 100 comes in servings of 5 pc and 10 pc with respect to their sizes (small/large)
+- item numbers 101, 103, 104 come in servings of 2 rolls or 4 rolls with respect to their sizes (small/large)
