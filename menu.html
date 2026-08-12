@@ -61,7 +61,11 @@
 
   <script src="js/main.js"></script>
   <script>
-    const MENU = [
+    // Published-to-web Google Sheet CSV URL. Non-technical price edits happen there;
+    // leave blank to always use MENU_FALLBACK below.
+    const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSRsPVTCUrrC2QmS0LE0yGbw-2PML_rrbOsUBDLEswe1B7Z0eJshD21kk-i_3hARW05HYAB-6fzA0KQ/pub?gid=1941263767&single=true&output=csv";
+
+    const MENU_FALLBACK = [
       {
         id: "hotpot", title: "New Seafood Hot Pot", viet: "Lẩu Hải Sản", num: "01",
         note: "All hot pots are served with a live burner at your table — please notify us of any food or nuts allergies.",
@@ -171,12 +175,12 @@
           { code: "333", viet: "Phở Nạm Gân Sách", eng: "Well-done flank, soft tendon & beef tripe rice noodle soup", sizes: { S: "14.25", M: "15.50", L: "16.75", XL: "18.50" } },
           { code: "334", viet: "Phở Bò Viên Sách", eng: "Beef balls & tripe rice noodle soup", sizes: { S: "14.25", M: "15.50", L: "16.75", XL: "18.50" } },
           { code: "335", viet: "Phở Bò Viên", eng: "Beef balls rice noodle soup", sizes: { S: "14.25", M: "15.50", L: "16.75", XL: "18.50" } },
-          { code: "336", viet: "Phở Đặc Biệt", eng: "Special assorted beef rice noodle soup (tái, nạm, gân, sách, bò viên)", sizes: { S: "14.25", M: "15.50", L: "16.75", XL: "18.50" } },
+          { code: "336", viet: "Phở Đặc Biệt", eng: "Special assorted beef rice noodle soup (tái (rare beef), nạm (flank), gân (soft tendon), sách (tripe), bò viên (beef ball))", sizes: { S: "14.25", M: "15.50", L: "16.75", XL: "18.50" } },
           { code: "337", viet: "Phở Gà Nướng", eng: "Grilled chicken with lemongrass & rice noodle soup", sizes: { S: "14.25", M: "15.50", L: "16.75", XL: "18.50" } },
           { code: "338", viet: "Phở Gà", eng: "Chicken rice noodle soup", sizes: { S: "14.25", M: "15.50", L: "16.75", XL: "18.50" } },
           { code: "339", viet: "Phở Tái Gà", eng: "Rare beef & chicken rice noodle soup", sizes: { S: "14.25", M: "15.50", L: "16.75", XL: "18.50" } },
           { code: "340", viet: "Phở Nạm Gà", eng: "Well-done flank & chicken rice noodle soup", sizes: { S: "14.25", M: "15.50", L: "16.75", XL: "18.50" } },
-          { code: "341", viet: "Phở Bò Gà", eng: "Assorted beef & chicken rice noodle soup (tái, nạm, gân, sách, bò viên gà)", sizes: { S: "14.25", M: "15.50", L: "16.75", XL: "18.50" } },
+          { code: "341", viet: "Phở Bò Gà", eng: "Assorted beef & chicken rice noodle soup (tái (rare beef), nạm (flank), gân (soft tendon), sách (tripe), bò viên (beef ball), gà (chicken))", sizes: { S: "14.25", M: "15.50", L: "16.75", XL: "18.50" } },
           { code: "342", viet: "Phở Tôm Nướng", eng: "Grilled shrimp rice noodle soup", sizes: { S: "14.25", M: "15.50", L: "16.75", XL: "18.50" } },
           { code: "343", viet: "Phở Đồ Biển Rau Cải", eng: "Seafood with vegetable rice noodle soup", sizes: { S: "14.50", M: "15.75", L: "16.99", XL: "18.75" } },
           { code: "344", viet: "Phở Thái", eng: "Thai style rare beef & shrimp rice noodle soup", sizes: { S: "14.50", M: "15.75", L: "16.99", XL: "18.75" } },
@@ -205,7 +209,7 @@
           { code: "456", viet: "Bún Nem Nướng", eng: "Vermicelli with Vietnamese grilled meat balls", price: "16.75" },
           { code: "457", viet: "Nem Nướng", eng: "Vietnamese grilled meat balls, served with vermicelli, mint leaves, salad & rice paper — make your own wrap", price: "19.50" },
           { code: "477", viet: "Bún Chạo Tôm, Chả Giò", eng: "Vermicelli with grilled shrimp paste on sugar cane & spring roll", price: "17.99" },
-          { code: "—", viet: "Bún Chạo Tôm, Nem Nướng, Bì", eng: "Vermicelli with grilled shrimp paste on sugar cane, shredded pork skin & meat ball", price: "19.50" },
+          { code: "478", viet: "Bún Chạo Tôm, Nem Nướng, Bì", eng: "Vermicelli with grilled shrimp paste on sugar cane, shredded pork skin & meat ball", price: "19.50" },
         ]
       },
       {
@@ -358,43 +362,127 @@
       return `<span class="menu-price">$${item.price}</span>`;
     }
 
-    MENU.forEach(section => {
-      const pill = document.createElement("button");
-      pill.textContent = section.title;
-      pill.dataset.target = section.id;
-      pill.addEventListener("click", () => {
-        document.getElementById(section.id).scrollIntoView({ behavior: "smooth", block: "start" });
-      });
-      pillNav.appendChild(pill);
+    // Small CSV parser (handles quoted fields with commas/newlines/escaped quotes) —
+    // needed since the published Sheet's English descriptions contain commas.
+    function parseCSV(text) {
+      const rows = [];
+      let row = [], field = "", inQuotes = false;
+      for (let i = 0; i < text.length; i++) {
+        const c = text[i];
+        if (inQuotes) {
+          if (c === '"' && text[i + 1] === '"') { field += '"'; i++; }
+          else if (c === '"') { inQuotes = false; }
+          else { field += c; }
+        } else if (c === '"') {
+          inQuotes = true;
+        } else if (c === ",") {
+          row.push(field); field = "";
+        } else if (c === "\n" || c === "\r") {
+          if (c === "\r" && text[i + 1] === "\n") i++;
+          row.push(field); field = "";
+          if (row.length > 1 || row[0] !== "") rows.push(row);
+          row = [];
+        } else {
+          field += c;
+        }
+      }
+      if (field !== "" || row.length) { row.push(field); rows.push(row); }
+      const header = rows.shift();
+      return rows.map(r => Object.fromEntries(header.map((h, i) => [h, r[i] ?? ""])));
+    }
 
-      const cat = document.createElement("div");
-      cat.className = "menu-category";
-      cat.id = section.id;
-      cat.innerHTML = `
-        <div class="menu-band">
-          <span class="menu-num">${section.num}</span>
-          <h2>${section.title}</h2>
-          <span class="menu-viet">${section.viet}</span>
-        </div>
-        ${section.note ? `<p class="menu-note">${section.note}</p>` : ""}
-        <div class="menu-grid">
-          ${section.items.map(item => `
-            <article class="menu-card" data-search="${normalize(item.viet + " " + item.eng + " " + item.code)}">
-              <div class="menu-card-top">
-                <div>
-                  <span class="menu-code">${item.code}</span>
-                  <div class="menu-viet-name">${item.viet}</div>
+    function buildMenuFromRows(records) {
+      const sections = [];
+      const byId = {};
+      for (const r of records) {
+        if (r.section_id && !byId[r.section_id]) {
+          byId[r.section_id] = { id: r.section_id, title: r.section_title, viet: r.section_viet, num: r.section_num, note: r.section_note || undefined, items: [] };
+          sections.push(byId[r.section_id]);
+        }
+        const sizes = {};
+        for (const key of ["S", "M", "L", "XL"]) {
+          if (r["size_" + key]) sizes[key] = r["size_" + key];
+        }
+        sections[sections.length - 1].items.push({
+          code: r.item_code,
+          viet: r.item_viet,
+          eng: r.item_eng,
+          ...(Object.keys(sizes).length ? { sizes } : { price: r.price || null }),
+        });
+      }
+      return sections;
+    }
+
+    function renderMenu(MENU) {
+      main.innerHTML = "";
+      pillNav.innerHTML = "";
+
+      MENU.forEach(section => {
+        const pill = document.createElement("button");
+        pill.textContent = section.title;
+        pill.dataset.target = section.id;
+        pill.addEventListener("click", () => {
+          document.getElementById(section.id).scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+        pillNav.appendChild(pill);
+
+        const cat = document.createElement("div");
+        cat.className = "menu-category";
+        cat.id = section.id;
+        cat.innerHTML = `
+          <div class="menu-band">
+            <span class="menu-num">${section.num}</span>
+            <h2>${section.title}</h2>
+            <span class="menu-viet">${section.viet}</span>
+          </div>
+          ${section.note ? `<p class="menu-note">${section.note}</p>` : ""}
+          <div class="menu-grid">
+            ${section.items.map(item => `
+              <article class="menu-card" data-search="${normalize(item.viet + " " + item.eng + " " + item.code)}">
+                <div class="menu-card-top">
+                  <div>
+                    <span class="menu-code">${item.code}</span>
+                    <div class="menu-viet-name">${item.viet}</div>
+                  </div>
+                  ${item.sizes ? "" : priceHTML(item)}
                 </div>
-                ${item.sizes ? "" : priceHTML(item)}
-              </div>
-              <div class="menu-eng-name">${item.eng}</div>
-              ${item.sizes ? priceHTML(item) : ""}
-            </article>
-          `).join("")}
-        </div>
-      `;
-      main.appendChild(cat);
-    });
+                <div class="menu-eng-name">${item.eng}</div>
+                ${item.sizes ? priceHTML(item) : ""}
+              </article>
+            `).join("")}
+          </div>
+        `;
+        main.appendChild(cat);
+      });
+
+      const categories = Array.from(document.querySelectorAll(".menu-category"));
+      const pills = Array.from(pillNav.children);
+      const spy = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            pills.forEach(p => p.classList.toggle("active", p.dataset.target === id));
+          }
+        });
+      }, { rootMargin: "-40% 0px -55% 0px", threshold: 0 });
+      categories.forEach(c => spy.observe(c));
+    }
+
+    (async function loadMenu() {
+      if (SHEET_CSV_URL) {
+        try {
+          const res = await fetch(SHEET_CSV_URL);
+          if (!res.ok) throw new Error("HTTP " + res.status);
+          const data = buildMenuFromRows(parseCSV(await res.text()));
+          if (!data.length) throw new Error("empty menu");
+          renderMenu(data);
+          return;
+        } catch (err) {
+          console.warn("Menu Sheet fetch failed, using fallback menu:", err);
+        }
+      }
+      renderMenu(MENU_FALLBACK);
+    })();
 
     searchInput.addEventListener("input", () => {
       const q = normalize(searchInput.value.trim());
@@ -411,18 +499,6 @@
       });
       noResults.style.display = anyVisible ? "none" : "block";
     });
-
-    const categories = Array.from(document.querySelectorAll(".menu-category"));
-    const pills = Array.from(pillNav.children);
-    const spy = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const id = entry.target.id;
-          pills.forEach(p => p.classList.toggle("active", p.dataset.target === id));
-        }
-      });
-    }, { rootMargin: "-40% 0px -55% 0px", threshold: 0 });
-    categories.forEach(c => spy.observe(c));
   </script>
 </body>
 </html>
